@@ -25,15 +25,18 @@ jobs:
 
     - name: Install Dependencies
       run: npm ci
+      working-directory: ./TwoShips
 
     - name: Install xvfb
       run: sudo apt-get install xvfb 
+      working-directory: ./TwoShips
 
     - name: Start Local Server
       run: |
         npm install -g live-server
         live-server --port=5500 --watch="./index.html" &
         sleep 5
+      working-directory: ./TwoShips
     # - name: Wait for Local Server
     #   run: wait-on http://127.0.0.1:5500/TwoShips/index.html
     # - name: Debug 
@@ -41,6 +44,8 @@ jobs:
 
     - name: Run Nightwatch tests 
       run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
+      working-directory: ./TwoShips
       
     - name: Stop Local Server
       run: pkill -f "live-server"
+      working-directory: ./TwoShips
