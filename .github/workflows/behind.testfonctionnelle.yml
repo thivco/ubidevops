@@ -25,12 +25,12 @@ jobs:
         cache: 'npm'
 
     - name: Install Dependencies
-      run: npm ci
       working-directory: ./BehindAsteroid
+      run: BehindAsteroidnpm ci
 
     - name: Install xvfb
-      run: sudo apt-get install xvfb 
       working-directory: ./BehindAsteroid
+      run: sudo apt-get install xvfb 
 
     # - name: Start the game
     #   run: npm run start
@@ -47,8 +47,8 @@ jobs:
     #   run: ls ./
 
     - name: Run Nightwatch test
-      run: xvfb-run --auto-servernum npm run nightwatchba -- --env chrome
       working-directory: ./BehindAsteroid
+      run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
 
     # - name: Stop Local Server
     #   run: pkill -f "live-server"
