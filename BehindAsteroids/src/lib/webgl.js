@@ -1,4 +1,3 @@
-/* global gl, W, H, DEBUG */
 
 function glCreateShader (vert, frag) {
   var handle, type = gl.VERTEX_SHADER, src = vert;

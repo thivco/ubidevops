@@ -1,5 +1,3 @@
-/* global ctx */
-
 function path (pts, noclose) { // eslint-disable-line no-unused-vars
   ctx.beginPath();
   var mv = 1;
