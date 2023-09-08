@@ -1,19 +1,4 @@
-/* global
-DEBUG
-AIrotate: true
-AIboost: true
-AIshoot: true
-AIexcitement: true
-spaceship
-t dt
-asteroids
-bullets
-W H
-dist normAngle
-ufos
-playingSince
-ctx
-*/
+
 
 /*
 if (DEBUG) {

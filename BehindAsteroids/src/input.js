@@ -76,7 +76,7 @@ else {
     onTap(e);
   });
   addEventListener("keydown", function (e) {
-    keys[e.which] = 1;
+    keys[e.which] = 1
   });
   addEventListener("keyup", function (e) {
     keys[e.which] = 0;
