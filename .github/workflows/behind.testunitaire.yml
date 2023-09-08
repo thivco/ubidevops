@@ -32,15 +32,15 @@ jobs:
       - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         name: List the state of node modules
         continue-on-error: true
-        working-directory: BehindAsteroid
+        working-directory: BehindAsteroids
         run: npm list
 
       - name: Install dependencies
-        working-directory: BehindAsteroid
+        working-directory: BehindAsteroids
         run: npm install
 
       - name: Test
-        working-directory: BehindAsteroid
+        working-directory: BehindAsteroids
         run: npm test
 
       # - name: Eslint
