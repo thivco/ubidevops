@@ -1,4 +1,3 @@
-// const antinople = require("../src/math");
 import {randFloatSpread, mapLinear, lerp} from '../src/math';
 
 describe('test suite math.js', () => {
