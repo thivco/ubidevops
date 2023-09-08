@@ -1,0 +1,13 @@
+{
+    "name": "dockerburger",
+    "version": "1.0.0",
+    "description": "Node.js",
+    "author": "Un développeur sûrement très impliqué",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2"
+    }
+  }

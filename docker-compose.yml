@@ -1,0 +1,20 @@
+version: '3'
+services:
+    twoships:
+        build: 
+            dockerfile: Dockerfile
+            context: ./TwoShips
+        ports:
+            - "5000:5000"
+    behindasteroids:
+        build: 
+            dockerfile: Dockerfile
+            context: ./BehindAsteroids
+        ports:
+            - "7575:8080"
+    keepwhitespace:
+        build: 
+            dockerfile: Dockerfile
+            context: ./KeepWhiteSpace
+        ports:
+            - "4243:80"

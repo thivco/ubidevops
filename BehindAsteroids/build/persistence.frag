@@ -1,0 +1,1 @@
+precision highp float;varying vec2 uv;uniform sampler2D t;uniform sampler2D r;void main(){vec3 a=texture2D(r,uv).rgb;gl_FragColor=vec4(a*(0.82-0.3*a.r*a.r)+texture2D(t,uv).rgb,1.0);}
