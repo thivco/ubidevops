@@ -24,24 +24,24 @@ jobs:
         cache: 'npm'
 
     - name: Install Dependencies
-      working-directory: ./TwoShips
+      working-directory: TwoShips
       run: npm ci
 
     - name: Install xvfb
-      working-directory: ./TwoShips
+      working-directory: TwoShips
       run: sudo apt-get install xvfb 
 
     - name: Start Local Server
-      working-directory: ./TwoShips
+      working-directory: TwoShips
       run: |
         npm install -g live-server
         live-server --port=5500 --watch="./index.html" &
         sleep 5
 
     - name: Run Nightwatch tests 
-      working-directory: ./TwoShips
+      working-directory: TwoShips
       run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
       
     - name: Stop Local Server
-      working-directory: ./TwoShips
+      working-directory: TwoShips
       run: pkill -f "live-server"
