@@ -32,13 +32,13 @@ jobs:
       - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         name: List the state of node modules
         continue-on-error: true
-        working-directory: ./TwoShips
+        working-directory: TwoShips
         run: npm list
 
       - name: Install dependencies
-        working-directory: ./TwoShips
+        working-directory: TwoShips
         run: npm install
 
       - name: Test
-        working-directory: ./TwoShips
+        working-directory: TwoShips
         run: npm test
