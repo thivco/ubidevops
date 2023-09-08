@@ -1,0 +1,22 @@
+{
+  "name": "keepwhitespace",
+  "version": "1.0.0",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node ./node_modules/jest/bin/jest.js",
+    "test:watch": "node --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.4",
+    "jest": "^29.6.4",
+    "jest-environment-jsdom": "^29.6.4",
+    "jsdom": "^22.1.0"
+  },
+  "keywords": [],
+  "description": ""
+}

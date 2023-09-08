@@ -1,4 +1,4 @@
-name: Nightwatch Tests
+name: tests fonctionnels twoships
 
 on:
   push:
