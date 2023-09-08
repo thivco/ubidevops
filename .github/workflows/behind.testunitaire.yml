@@ -40,7 +40,7 @@ jobs:
         working-directory: ./BehindAsteroid
 
       - name: Test
-        run: npm test
+        run: npm testba
         working-directory: ./BehindAsteroid
 
       # - name: Eslint

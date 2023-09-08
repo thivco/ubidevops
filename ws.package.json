@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "node ./node_modules/jest/bin/jest.js",
+    "testws": "node ./node_modules/jest/bin/jest.js",
     "test:watch": "node --watch"
   },
   "author": "",

@@ -7,10 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "test": "jest",
+    "testts": "jest",
     "lint":  "npx eslint ./build/build.js",          
-    "nightwatch:headless": "nightwatch ./nightwatch/examples/twoshipstest/*.js --headless",
-    "nightwatch": "nightwatch ./nightwatch/examples/twoshipstest/*.js"
+    "nightwatchts": "nightwatch ./nightwatch/examples/twoshipstest/*.js"
   },
   "repository": {
     "type": "git",

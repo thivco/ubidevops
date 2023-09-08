@@ -16,8 +16,8 @@
     "zip": "cd target; zip -r ../target.zip .; cd ..; wc -c target.zip",
     "start": "npm run watch & npm run liveserver",
     "lint":  "npx eslint ./build/build.js",          
-    "nightwatch": "npm run start & npx nightwatch ./test/",
-    "test": "jest"
+    "nightwatchba": "npm run start & npx nightwatch ./test/",
+    "testba": "jest"
   },
   "repository": {
     "type": "git",

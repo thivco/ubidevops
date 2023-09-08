@@ -40,5 +40,5 @@ jobs:
         working-directory: ./TwoShips
 
       - name: Test
-        run: npm test
+        run: npm testts
         working-directory: ./TwoShips

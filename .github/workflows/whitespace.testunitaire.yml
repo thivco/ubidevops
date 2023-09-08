@@ -25,6 +25,6 @@ jobs:
           working-directory: ./KeepWhiteSpace
 
         - name: tests
-          run: npm test
+          run: npm testws
           working-directory: ./KeepWhiteSpace
 

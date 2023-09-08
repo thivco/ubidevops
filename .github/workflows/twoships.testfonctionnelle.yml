@@ -39,7 +39,7 @@ jobs:
       working-directory: ./TwoShips
 
     - name: Run Nightwatch tests 
-      run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
+      run: xvfb-run --auto-servernum npm run nightwatchts -- --env chrome
       working-directory: ./TwoShips
       
     - name: Stop Local Server
