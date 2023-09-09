@@ -24,6 +24,25 @@ services:
     volumes:
       - my-datavolume:/var/lib/mysql
 
+  twoships:
+    build: 
+        dockerfile: Dockerfile
+        context: ../../TwoShips
+    ports:
+        - "5000:80"
+
+  behindasteroids:
+    build: 
+        dockerfile: Dockerfile
+        context: ../../BehindAsteroids
+    ports:
+        - "7575:8080"
+  keepwhitespace:
+    build: 
+        dockerfile: Dockerfile
+        context: ../../KeepWhiteSpace
+    ports:
+        - "4243:80"
 
   adminer:
     image: adminer

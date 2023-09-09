@@ -1,11 +1,15 @@
-FROM node:18
+FROM node:18 as build
 
 WORKDIR /app
 
-COPY . .
+COPY . /app
 
 RUN npm install
 
-EXPOSE 5000
+RUN npm run build
 
-CMD [ "npm" , "run", "serve" ]
+FROM nginx:latest    
+
+COPY --from=build /app/dist /usr/share/nginx/html    
+
+EXPOSE 80

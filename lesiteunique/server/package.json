@@ -1,8 +1,8 @@
 {
   "scripts": {
     "start": "node server.js",
-    "order66": " docker compose stop; docker compose rm ",
-    "vador": " docker compose build && docker compose up"
+    "order66": "sudo docker compose stop; sudo docker compose rm --force ",
+    "vador": "sudo docker compose build && sudo docker compose up"
 
   },
   "dependencies": {
