@@ -7,6 +7,9 @@ var audio = new Audio("./assets/SW.mp3");
 function App() {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [selectedPort, setSelectedPort] = React.useState(); 
+  const [selectedGame, setSelectedGame] = React.useState(""); 
+  const [selectedPseudo, setSelectedPseudo] = React.useState("NoName"); 
+
 
   let port
   const openModal = (i) => {
@@ -26,6 +29,23 @@ function App() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  }
+let jeu
+  function prompterino(){
+   let pseudo = prompt("Ouais mon gars ça dit quoi ?");
+   console.log("selectedport:", selectedPort)
+   if (selectedPort === 7575){
+    jeu = "Behind Asteroid"
+   }
+   else if (selectedPort === 5000){
+    jeu = "TwoShips"
+   }
+   else if (selectedPort === 4243){
+    jeu = "WhiteSpace"
+   }
+   alert("Bonjour "+pseudo+", ton temps de jeu sera sauvegardé sur "+jeu)
+   setSelectedGame(jeu)
+   setSelectedPseudo(pseudo)
   }
   const iframeSrc = `http://localhost:${selectedPort}`;
 
@@ -66,6 +86,7 @@ function App() {
             <button onClick={closeModal}>X</button>
           <div className='videojuego'>
             <iframe src={iframeSrc} width="800" height="600" title="Jeu"></iframe>
+            <button onClick={() => prompterino()}>Prétexte pour envoyer quelquechose à la db</button>
           </div>
         </Modal>
       </div>
